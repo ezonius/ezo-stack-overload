@@ -1,11 +1,11 @@
 ﻿This mod lets you multiply the stack size and weight of items.
 
-- General multiplier, applied to specified Item Types and Item Names (internal) 
+- General multiplier, applied to specified Item Types and Item Names (internal names)
 - Both Item Types and Item Names can be specified with a multiplier specific to each.
 
 Item Types and Item Names settings field, has the format:
 
-` item_type=stack_size, item_type2=stack_size2`
+` item_type=stack_size, another_item_type=stack_size`
 
 - Entries separated by comma. 
 - 'stack_size' is optional, if omitted will use multiplier above.
