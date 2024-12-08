@@ -26,32 +26,7 @@ data:extend({
         setting_type = "startup",
         default_value = defaultNames,
         allow_blank = true
-    },
-    {
-        type = "int-setting",
-        name = "new-request-multiplier",
-        order = "baa",
-        setting_type = "startup",
-        default_value = 1,
-        minimum_value = 1,
-        maximum_value = 100000,
-    },
-    {
-        type = "string-setting",
-        name = "request-item-types-to-change",
-        order = "bab",
-        setting_type = "startup",
-        default_value = defaultTypes,
-        allow_blank = true
-    },
-    {
-        type = "string-setting",
-        name = "request-item-names-to-change",
-        order = "bac",
-        setting_type = "startup",
-        default_value = defaultNames,
-        allow_blank = true
-    },
+    }
 
 })
 if mods["space-age"] then

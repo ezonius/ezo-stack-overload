@@ -1,11 +1,8 @@
 ---@diagnostic disable: assign-type-mismatch, param-type-mismatch
-local newRequestMultiplier = settings.startup["new-request-multiplier"].value
 local newStackSizeMultiplier = settings.startup["new-stack-size-multiplier"].value
 local newWeightMultiplier = settings.startup["new-weight-multiplier"].value
 local stackSizeItemTypesToChangeString = settings.startup["stackSize-item-types-to-change"].value
 local stackSizeItemNamesToChangeString = settings.startup["stackSize-item-names-to-change"].value
-local requestItemTypesToChangeString = settings.startup["request-item-types-to-change"].value
-local requestItemNamesToChangeString = settings.startup["request-item-names-to-change"].value
 local weightItemTypesToChangeString = settings.startup["weight-item-types-to-change"].value
 local weightItemNamesToChangeString = settings.startup["weight-item-names-to-change"].value
 
@@ -57,9 +54,6 @@ end
 local stackSizeItemTypesToChange = parseSettingString(stackSizeItemTypesToChangeString, "stack")
 local stackSizeItemNamesToChange = parseSettingString(stackSizeItemNamesToChangeString, "stack")
 
-local requestItemTypesToChange = parseSettingString(requestItemTypesToChangeString, "request")
-local requestItemNamesToChange = parseSettingString(requestItemNamesToChangeString, "request")
-
 local weightItemTypesToChange = parseSettingString(weightItemTypesToChangeString, "weight")
 local weightItemNamesToChange = parseSettingString(weightItemNamesToChangeString, "weight")
 
@@ -106,16 +100,6 @@ for itemTypeName, itemType in pairs(data.raw) do
             elseif stackSizeItemNamesToChange[itemName] or stackSizeItemTypesToChange[itemTypeName] then
                 --log("[3]StackSize of data.raw[" ..itemTypeName .. "]" .. "[" .. itemName .. "]" .. " changed to " .. item.stack_size * newStackSizeMultiplier)
                 item.stack_size = item.stack_size * newStackSizeMultiplier
-            end
-        end
-
-        if item.stack_size and item.default_request_amount then
-            if requestItemNamesToChange[itemName] and requestItemNamesToChange[itemName].default_request_amount then
-                item.default_request_amount = requestItemNamesToChange[itemName].default_request_amount
-            elseif requestItemTypesToChange[itemTypeName] and requestItemTypesToChange[itemTypeName].default_request_amount then
-                item.default_request_amount = requestItemTypesToChange[itemTypeName].default_request_amount
-            elseif requestItemNamesToChange[itemName] or requestItemTypesToChange[itemTypeName] then
-                item.default_request_amount = item.default_request_amount * newRequestMultiplier
             end
         end
 
