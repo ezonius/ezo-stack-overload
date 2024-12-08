@@ -44,5 +44,5 @@
     "(?) electric-trains",
     "(?) robotworld-continued"
   ],
-  "description": "Multiply stack size and weight of any item or item type, by a general multiplier, or a multiplier specific to the item type or item name"
+  "description": "Multiply stack size and/or weight of any item or item type, by a general multiplier, or a multiplier specific to the item type or item name"
 }
