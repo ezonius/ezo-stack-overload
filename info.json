@@ -1,6 +1,6 @@
 {
   "name": "ezo-stack-overload",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "title": "Stack Overload",
   "author": "ezonius",
   "factorio_version": "2.0",
@@ -44,5 +44,5 @@
     "(?) electric-trains",
     "(?) robotworld-continued"
   ],
-  "description": "Multiply stack size of any item or item group, by a general multiplier, or a multiplier specific to the item group or item"
+  "description": "Multiply stack size and weight of any item or item type, by a general multiplier, or a multiplier specific to the item type or item name"
 }
