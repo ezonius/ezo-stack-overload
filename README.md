@@ -5,7 +5,7 @@
 
 Item Types and Item Names settings field, has the format:
 
-` 'item_type=stack_size', item_type2=stack_size2`
+` item_type=stack_size, item_type2=stack_size2`
 
 - Entries separated by comma. 
 - 'stack_size' is optional, if omitted will use multiplier above.
