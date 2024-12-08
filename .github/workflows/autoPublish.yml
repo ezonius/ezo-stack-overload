@@ -6,6 +6,8 @@ on:
       - 'info.json' # Triggers only if the mod info file is updated
     branches:
       - master
+    tags:
+      - '*'
   workflow_dispatch:
 
 jobs:
